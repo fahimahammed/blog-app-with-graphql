@@ -1,41 +1,29 @@
-# Blog app
+# Blog App
 
-## requirement 
-- user can post and pulish blog content
-- user can see post 
-- authentication system
-- user can see their own profile
+This documentation outlines the functionality and implementation of a GraphQL blog app built using TypeScript, PostgreSQL, and Prisma. The app allows users to create, publish, and view blog posts, manage their profiles, and implement an authentication system.
 
-## Table
+## Example Usage
 
-- post
-    - id
-    - title
-    - content
-    - authorId
-    - createdAt
-    - updatedAt
-    - published
+```gql
+query {
+  posts {
+    id
+    title
+    content
+    author {
+      id
+      name
+      email
+    }
+  }
+}
+```
 
-- user
-    - id
-    - name
-    - email
-    - password
-    - createAt
-    - updateAt
-    - profile
-
-- profile
-    - id
-    - bio
-    - createAt
-    - updateAt
-    - userId
-
-
-## Technology Stack:
-- graphql
-- typescript
-- postgresql
-- prisma
+```gql
+mutation {
+  signup(name: "Fahim", email: "fahim@ph.com", password: "123456") {
+    token
+    userError
+  }
+}
+```
