@@ -5,7 +5,6 @@ This documentation outlines the functionality and implementation of a GraphQL bl
 ## Example Usage
 
 ```gql
-// query (get)
 query {
   posts {
     id
@@ -21,7 +20,6 @@ query {
 ```
 
 ```gql
-// mutation (post)
 mutation {
   signup(name: "Fahim", email: "fahim@ph.com", password: "123456") {
     token
